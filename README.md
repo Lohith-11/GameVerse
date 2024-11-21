@@ -43,22 +43,16 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
 4. **Memory Card Game**:  
    - Match cards to test your memory.  
 
-5. **Simon Says**:  
-   - Follow patterns to challenge your focus and memory.  
-
-6. **Typing Speed Test**:  
+5. **Typing Speed Test**:  
    - Measure and improve your typing speed with real-time feedback.  
 
-7. **Whack-A-Mole**:  
+6. **Whack-A-Mole**:  
    - Test your reflexes by clicking moles within the time limit.  
 
-8. **Guess the Word**:  
+7. **Guess the Word**:  
    - Random word guessing game with dynamic difficulty.  
-
-9. **Catch the Ball**:  
-   - Arcade-style challenge to catch moving balls.  
-
-10. **Number Guessing Game**:  
+ 
+8. **Number Guessing Game**:  
     - Guess the randomly generated number with helpful hints.  
 
 ---
@@ -94,3 +88,55 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
    ```bash
    git clone https://github.com/your-username/GameVerse.git
    cd GameVerse
+2. Install dependencies:
+    ```bash
+    npm install
+3.  Start the development server:
+    ```bash
+    npm start
+4. Open [http://localhost:3000] in your browser to start exploring GameVerse.
+
+## 🖼 Screenshots  
+
+### Home Page  
+![Home Page](./public/screenshots/HomePage.png)  
+
+## 🎮 Games Section  
+
+### Preview of Games  
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="./public/screenshots/Tic-Tac-Toe game.png" alt="Tic Tac Toe" width="200px">
+      <br>
+      <b>Tic Tac Toe</b>
+    </td>
+    <td align="center">
+      <img src="./public/screenshots/Snake Game.png" alt="Snake Game" width="200px">
+      <br>
+      <b>Snake Game</b>
+    </td>
+    <td align="center">
+      <img src="./public/screenshots/Memory game.png" alt="Memory Game" width="200px">
+      <br>
+      <b>Memory Game</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./public/screenshots/Typing Speed Test.png" alt="Typing Speed Test" width="200px">
+      <br>
+      <b>Typing Speed Test</b>
+    </td>
+    <td align="center">
+      <img src="./public/screenshots/Whake-a-mole.png" alt="Whack-A-Mole" width="200px">
+      <br>
+      <b>Whack-A-Mole</b>
+    </td>
+  </tr>
+</table>
+
+
+### Tic Tac Toe  
+![Tic Tac Toe](./public/screenshots/tic-tac-toe.png)  
