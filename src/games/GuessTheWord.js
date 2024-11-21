@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-// List of words to pick from
 const words = ["REACT", "JAVASCRIPT", "HTML", "CSS", "NODEJS", "REACTJS", "MONGODB", "EXPRESS"];
 
 const GuessTheWord = () => {
   const [word, setWord] = useState("");
   const [displayWord, setDisplayWord] = useState("");
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
-  const [attempts, setAttempts] = useState(6); // Max incorrect attempts
+  const [attempts, setAttempts] = useState(6);
   const [gameOver, setGameOver] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Function to pick a random word from the list
   const getRandomWord = () => {
     const randomIndex = Math.floor(Math.random() * words.length);
     return words[randomIndex];
   };
 
-  // Start the game by setting the word and initializing the display word
+
   const startNewGame = () => {
     const newWord = getRandomWord();
     setWord(newWord);
@@ -28,7 +26,6 @@ const GuessTheWord = () => {
     setMessage("");
   };
 
-  // Handle player's guess
   const handleGuess = (letter) => {
     if (gameOver || incorrectGuesses.includes(letter) || displayWord.includes(letter)) {
       return;
@@ -48,7 +45,6 @@ const GuessTheWord = () => {
     }
   };
 
-  // Check for game over conditions
   useEffect(() => {
     if (attempts === 0) {
       setGameOver(true);
@@ -59,18 +55,17 @@ const GuessTheWord = () => {
     }
   }, [attempts, displayWord]);
 
-  // Handle input for guess
+
   const handleInputChange = (e) => {
     if (e.key === "Enter") {
       const letter = e.target.value.toUpperCase();
       if (letter && letter.match(/[A-Z]/i)) {
         handleGuess(letter);
-        e.target.value = ""; // Clear the input field
+        e.target.value = "";
       }
     }
   };
 
-  // Restart the game
   const restartGame = () => {
     startNewGame();
   };
@@ -79,22 +74,22 @@ const GuessTheWord = () => {
     <div className="flex flex-col items-center mt-8 bg-gradient-to-b from-blue-500 to-purple-600 p-8 rounded-lg shadow-lg w-1/2 mx-auto">
       <h2 className="text-3xl font-bold text-white mb-4">Guess the Word Game</h2>
 
-      {/* Display the word with underscores */}
+
       <div className="text-4xl font-mono text-white mb-6">
         {displayWord}
       </div>
 
-      {/* Incorrect guesses */}
+
       <div className="text-lg text-white mb-4">
         Incorrect guesses: {incorrectGuesses.join(", ")}
       </div>
 
-      {/* Remaining attempts */}
+
       <div className="text-lg text-white mb-4">
         Attempts left: {attempts}
       </div>
 
-      {/* Message (win/loss) */}
+
       {gameOver && (
         <div className="mt-6 text-xl text-white">
           {message}
@@ -107,7 +102,7 @@ const GuessTheWord = () => {
         </div>
       )}
 
-      {/* Input for guesses */}
+
       {!gameOver && (
         <div className="mt-6 text-white">
           <input

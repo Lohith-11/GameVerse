@@ -6,7 +6,6 @@ const TicTacToe = () => {
   const [scores, setScores] = useState({ X: 0, O: 0 });
   const [winner, setWinner] = useState(null);
 
-  // Check for a winner or a draw
   const calculateWinner = (board) => {
     const lines = [
       [0, 1, 2],
@@ -27,7 +26,6 @@ const TicTacToe = () => {
     return board.every((cell) => cell !== null) ? "Draw" : null;
   };
 
-  // Handle cell click
   const handleClick = (index) => {
     if (board[index] || winner) return;
 
@@ -48,7 +46,7 @@ const TicTacToe = () => {
     setIsXTurn(!isXTurn);
   };
 
-  // Restart the game
+
   const restartGame = () => {
     setBoard(Array(9).fill(null));
     setWinner(null);
@@ -59,7 +57,6 @@ const TicTacToe = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
       <h1 className="text-3xl font-bold mb-6">Tic Tac Toe</h1>
 
-      {/* Scoreboard */}
       <div className="flex space-x-6 mb-6">
         <div className="text-xl font-semibold">
           <span className="text-blue-500">X:</span> {scores.X}
@@ -69,7 +66,6 @@ const TicTacToe = () => {
         </div>
       </div>
 
-      {/* Game Board */}
       <div className="grid grid-cols-3 gap-2">
         {board.map((cell, index) => (
           <div
@@ -82,7 +78,6 @@ const TicTacToe = () => {
         ))}
       </div>
 
-      {/* Winner or Turn Indicator */}
       <div className="mt-6 text-xl">
         {winner ? (
           winner === "Draw" ? (
@@ -99,7 +94,6 @@ const TicTacToe = () => {
         )}
       </div>
 
-      {/* Controls */}
       <div className="mt-6 flex space-x-4">
         <button
           onClick={restartGame}

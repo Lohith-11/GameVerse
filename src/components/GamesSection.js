@@ -35,17 +35,15 @@ const GamesSection = () => {
                 key={game.name}
                 className="relative group rounded-lg overflow-hidden shadow-xl transform transition-transform hover:scale-105"
               >
-                {/* Game Image */}
                 <img
                   src={game.image}
                   alt={game.name}
                   className="w-full h-64 object-cover"
                 />
-                {/* Game Name Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-2xl font-semibold text-white">{game.name}</h3>
                 </div>
-                {/* Play Now Button */}
+
                 <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Link
                     to={game.path}

@@ -16,7 +16,6 @@ import NumberGuessingGame from "./games/NumberGuessingGame";
 import MemoryCardGame from "./games/MemoryCardGame";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
-// Import other game components...
 
 const App = () => {
   const [userLoggedIn, setUserLoggedIn] = useState(null);
@@ -46,11 +45,6 @@ const App = () => {
           <Route path="/memory-card-game" element={<MemoryCardGame/>}/>
           <Route path="/about-us" element={<AboutUs/>}/>
           <Route path="/contact-us" element={<ContactUs/>}/>
-          
-
-
-
-          {/* Add other game routes here */}
         </Routes>
       </div>
     </Router>

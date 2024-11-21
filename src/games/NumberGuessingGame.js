@@ -7,14 +7,12 @@ const NumberGuessingGame = () => {
   const [attempts, setAttempts] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
-  // Function to generate a random number between 1 and 100
   function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
   }
 
-  // Handle the player's guess
   const handleGuess = () => {
-    if (gameOver) return; // Don't allow guesses after game over
+    if (gameOver) return;
 
     const guessInt = parseInt(guess);
     if (isNaN(guessInt) || guessInt < 1 || guessInt > 100) {
@@ -36,7 +34,6 @@ const NumberGuessingGame = () => {
     setGuess("");
   };
 
-  // Restart the game
   const restartGame = () => {
     setRandomNumber(generateRandomNumber());
     setGuess("");
@@ -53,7 +50,6 @@ const NumberGuessingGame = () => {
           <p className="text-gray-700">Guess the number between 1 and 100:</p>
         </div>
 
-        {/* Input for the guess */}
         <input
           type="number"
           value={guess}
@@ -62,7 +58,6 @@ const NumberGuessingGame = () => {
           disabled={gameOver}
         />
 
-        {/* Submit guess button */}
         <button
           onClick={handleGuess}
           className="w-full p-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:bg-gray-400 transition duration-300"
@@ -71,7 +66,6 @@ const NumberGuessingGame = () => {
           Guess
         </button>
 
-        {/* Message display */}
         <div className="mt-4 text-xl">
           <p className={`font-semibold ${gameOver ? "text-green-600" : "text-red-600"}`}>{message}</p>
         </div>

@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ userLoggedIn, setUserLoggedIn }) => {
   const handleLogout = () => {
-    setUserLoggedIn(null); // Log out the user
+    setUserLoggedIn(null);
   };
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 shadow-md">
       <div className="flex justify-between items-center px-6 py-4">
-        {/* Brand */}
         <h1 className="text-3xl font-extrabold text-white">GameVerse</h1>
 
-        {/* Navigation */}
         <nav className="flex items-center space-x-6">
           <Link
             to="/"
@@ -39,7 +37,6 @@ const Navbar = ({ userLoggedIn, setUserLoggedIn }) => {
             Contact
           </Link>
 
-          {/* Dynamic Login/Logout */}
           {userLoggedIn ? (
             <div className="relative">
               <div className="group relative flex items-center">
@@ -64,7 +61,6 @@ const Navbar = ({ userLoggedIn, setUserLoggedIn }) => {
                   </svg>
                 </button>
 
-                {/* Dropdown Menu */}
                 <ul
                   className="absolute right-0 mt-2 w-32 bg-gray-800 text-white rounded-md shadow-lg group-hover:block hidden"
                   style={{ zIndex: 1000 }}

@@ -19,12 +19,10 @@ const MemoryCardGame = () => {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    // Shuffle the cards
     const shuffledCards = shuffle([...cardsData]);
     setCards(shuffledCards);
   }, []);
 
-  // Shuffle the cards array
   const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -37,12 +35,9 @@ const MemoryCardGame = () => {
     if (flippedCards.length === 2 || flippedCards.includes(card.id) || matchedCards.includes(card.id)) {
       return;
     }
-
-    // Flip the card
     setFlippedCards((prevFlippedCards) => [...prevFlippedCards, card.id]);
 
     if (flippedCards.length === 1) {
-      // Check if the two flipped cards match
       setMoves((prevMoves) => prevMoves + 1);
 
       const firstCard = cards.find((c) => c.id === flippedCards[0]);

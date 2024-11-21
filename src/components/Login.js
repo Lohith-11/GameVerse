@@ -8,13 +8,11 @@ const Login = ({ setUserLoggedIn }) => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
-  // Email validation regex
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-  // Password validation
+
   const isValidPassword = password.length > 6 && password.length < 12;
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -36,10 +34,9 @@ const Login = ({ setUserLoggedIn }) => {
       return;
     }
 
-    // Simulate successful login
     setError("");
     setSuccess(true);
-    setUserLoggedIn({ name, email }); // Passing user info to the parent component
+    setUserLoggedIn({ name, email });
   };
 
   return (
@@ -47,11 +44,10 @@ const Login = ({ setUserLoggedIn }) => {
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
         <h2 className="text-2xl font-bold text-center mb-6 text-blue-500">Login</h2>
 
-        {/* Error or Success Message */}
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         {success && <p className="text-green-500 text-center mb-4">Login Successful!</p>}
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700 font-semibold">

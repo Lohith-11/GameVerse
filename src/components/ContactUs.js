@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
 const ContactUs = () => {
-  // State to handle form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,11 +15,10 @@ const ContactUs = () => {
     });
   };
 
-  // Handle form submission
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form submitted!");
-    // Here you can handle sending the form data to an API or email service
   };
 
   return (
