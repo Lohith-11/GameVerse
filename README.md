@@ -137,6 +137,3 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
   </tr>
 </table>
 
-
-### Tic Tac Toe  
-![Tic Tac Toe](./public/screenshots/tic-tac-toe.png)  
