@@ -161,7 +161,7 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
 - Personalize user profiles with stats and achievements.
 
 ## 🤝 Contributing
-Contributions are welcome! To contribute:
+**Contributions are welcome! To contribute:**
 
 1. Fork the repository.
 2. Create a new branch for your feature.
