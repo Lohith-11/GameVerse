@@ -139,6 +139,8 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
       <br>
       <b>Guess The Word</b>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <img src="./public/screenshots/Rock Paper Scissors.png" alt="Rock Paper Scissors" width="200px">
       <br>
