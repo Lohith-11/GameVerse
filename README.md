@@ -96,6 +96,8 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
     npm start
 4. Open [http://localhost:3000] in your browser to start exploring GameVerse.
 
+---
+
 ## 🖼 Screenshots  
 
 ### Home Page  
@@ -153,12 +155,14 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
     </td>
   </tr>
 </table>
+---
 
 ## 🌟 Future Enhancements
 - Add more games to expand the library.
 - Introduce a global leaderboard for score tracking.
 - Include multiplayer options for select games.
 - Personalize user profiles with stats and achievements.
+---
 
 ## 🤝 Contributing
 **Contributions are welcome! To contribute:**
@@ -167,6 +171,7 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
 2. Create a new branch for your feature.
 3. Commit and push your changes.
 4. Submit a pull request for review.
+---
 
 ## 🎉 Enjoy Gaming with GameVerse!
 Feel free to explore, play, and share your thoughts on this exciting gaming platform.
