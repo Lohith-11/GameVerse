@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const WhackAMole = () => {
-  // States
+
   const [molePosition, setMolePosition] = useState(null);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);

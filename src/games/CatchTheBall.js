@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const CatchTheBall = () => {
-  const [playerPosition, setPlayerPosition] = useState(0); // Player's horizontal position (controls basket)
-  const [balls, setBalls] = useState([]); // Array of balls
-  const [score, setScore] = useState(0); // Player's score
-  const [gameOver, setGameOver] = useState(false); // Game Over flag
-  const [fallingSpeed, setFallingSpeed] = useState(3); // Speed of falling balls
+  const [playerPosition, setPlayerPosition] = useState(0);
+  const [balls, setBalls] = useState([]);
+  const [score, setScore] = useState(0); 
+  const [gameOver, setGameOver] = useState(false); 
+  const [fallingSpeed, setFallingSpeed] = useState(3);
 
-  // Function to move the player (basket)
+
   const movePlayer = (event) => {
     if (event.key === "ArrowLeft" && playerPosition > 0) {
       setPlayerPosition(playerPosition - 10);
@@ -16,28 +16,28 @@ const CatchTheBall = () => {
     }
   };
 
-  // Ball object structure
+
   const createBall = () => {
-    const ballWidth = Math.random() * (50 - 20) + 20; // Random ball size
-    const ballPosition = Math.random() * (window.innerWidth - ballWidth); // Random horizontal position
+    const ballWidth = Math.random() * (50 - 20) + 20; 
+    const ballPosition = Math.random() * (window.innerWidth - ballWidth);
     return {
       id: Date.now(),
       x: ballPosition,
-      y: 0, // Starting from top
+      y: 0, 
       width: ballWidth,
       height: ballWidth,
     };
   };
 
-  // Drop balls at random intervals
+
   useEffect(() => {
-    if (gameOver) return; // Stop if game is over
+    if (gameOver) return; 
 
     const ballInterval = setInterval(() => {
       setBalls((prevBalls) => [...prevBalls, createBall()]);
     }, 1500);
 
-    // Move balls downwards and check collisions
+
     const moveBalls = setInterval(() => {
       setBalls((prevBalls) => {
         const updatedBalls = prevBalls.map((ball) => ({
@@ -45,16 +45,15 @@ const CatchTheBall = () => {
           y: ball.y + fallingSpeed,
         }));
 
-        // Check if any ball is caught or missed
         updatedBalls.forEach((ball, index) => {
-          // Check if ball caught by the player
+
           if (ball.y + ball.height >= window.innerHeight - 50 && ball.x >= playerPosition && ball.x <= playerPosition + 100) {
-            setScore((prevScore) => prevScore + 1); // Increase score
-            updatedBalls.splice(index, 1); // Remove caught ball
+            setScore((prevScore) => prevScore + 1); 
+            updatedBalls.splice(index, 1); 
           }
           // Check if ball missed
           if (ball.y > window.innerHeight) {
-            updatedBalls.splice(index, 1); // Remove missed ball
+            updatedBalls.splice(index, 1);
           }
         });
 
@@ -68,7 +67,7 @@ const CatchTheBall = () => {
     };
   }, [gameOver, playerPosition, fallingSpeed]);
 
-  // Start a new game
+
   const startNewGame = () => {
     setScore(0);
     setBalls([]);
@@ -76,7 +75,7 @@ const CatchTheBall = () => {
     setFallingSpeed(3);
   };
 
-  // Detect Game Over when score reaches zero
+
   useEffect(() => {
     if (score < 0) {
       setGameOver(true);
@@ -106,7 +105,7 @@ const CatchTheBall = () => {
             }}
           ></div>
         ))}
-        {/* Player's Basket */}
+
         <div
           className="absolute bottom-0"
           style={{
@@ -119,10 +118,10 @@ const CatchTheBall = () => {
         ></div>
       </div>
 
-      {/* Scoreboard */}
+
       <div className="text-white text-2xl mb-4">Score: {score}</div>
 
-      {/* Start/Restart Game */}
+ 
       {gameOver && (
         <div className="text-white text-3xl mb-4">Game Over! Your Score: {score}</div>
       )}

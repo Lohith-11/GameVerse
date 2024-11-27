@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 
 const TypingSpeedTest = () => {
-  const [textToType, setTextToType] = useState(""); // Text to type
-  const [userInput, setUserInput] = useState(""); // User's input
-  const [isTyping, setIsTyping] = useState(false); // Check if typing started
-  const [timeLeft, setTimeLeft] = useState(60); // Timer for the typing test (in seconds)
-  const [speed, setSpeed] = useState(0); // Typing speed (words per minute)
-  const [accuracy, setAccuracy] = useState(100); // Typing accuracy
-  const [gameStatus, setGameStatus] = useState(""); // Status message after game ends
+  const [textToType, setTextToType] = useState("");
+  const [userInput, setUserInput] = useState("");
+  const [isTyping, setIsTyping] = useState(false); 
+  const [timeLeft, setTimeLeft] = useState(60); 
+  const [speed, setSpeed] = useState(0);
+  const [accuracy, setAccuracy] = useState(100); 
+  const [gameStatus, setGameStatus] = useState(""); 
 
-  // List of random sentences or words
+
   const sampleTexts = [
     "The quick brown fox jumps over the lazy dog.",
     "React is a popular JavaScript library for building user interfaces.",
@@ -19,7 +19,7 @@ const TypingSpeedTest = () => {
     "Coding is fun and challenging at the same time.",
   ];
 
-  // Function to generate a random sentence from sampleTexts
+
   const generateRandomText = () => {
     const randomIndex = Math.floor(Math.random() * sampleTexts.length);
     setTextToType(sampleTexts[randomIndex]);

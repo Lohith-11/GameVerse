@@ -31,7 +31,6 @@ const App = () => {
             path="/login"
             element={<Login setUserLoggedIn={setUserLoggedIn} />} 
           />
-
           <Route path="/games" element={<GamesSection />} />
           <Route path="/tic-tac-toe" element={<TicTacToe />} />
           <Route path="/snake-game" element={<SnakeGame />} />
