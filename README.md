@@ -134,6 +134,21 @@ GameVerse is a modern, feature-rich gaming website built with **ReactJS** and **
       <br>
       <b>Whack-A-Mole</b>
     </td>
+    <td align="center">
+      <img src="./public/screenshots/Guess The Word.png" alt="Guess The Word" width="200px">
+      <br>
+      <b>Guess The Word</b>
+    </td>
+    <td align="center">
+      <img src="./public/screenshots/Rock Paper Scissors.png" alt="Rock Paper Scissors" width="200px">
+      <br>
+      <b>Rock Paper Scissors</b>
+    </td>
+    <td align="center">
+      <img src="./public/screenshots/Guess The Number.png" alt="Guess The Number" width="200px">
+      <br>
+      <b>Guess The Number</b>
+    </td>
   </tr>
 </table>
 
